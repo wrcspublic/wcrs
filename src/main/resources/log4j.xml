@@ -10,7 +10,7 @@
 	
 	<!-- 单文件滚动输出 -->
 	<appender name="file" class="org.apache.log4j.RollingFileAppender">
-		<param name="File" value="/logs/wcrs.log" />
+		<param name="File" value="~/logs/wcrs.log" />
 		<!--日志过滤门槛，记录warn以上级别日志 -->
 		<param name="Threshold" value="WARN" />
 		<layout class="org.apache.log4j.PatternLayout">
@@ -20,7 +20,7 @@
 
 	<!-- 按日期多文件输出 -->
 	<appender name="dailyFile" class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="/logs/wcrs.log" /><!-- 磁盘根存储路径，相当d:\logs\ibeans.log -->
+		<param name="File" value="~/logs/wcrs.log" /><!-- 磁盘根存储路径，相当d:\logs\ibeans.log -->
 		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'" />
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern" value="[%d{MMdd HH:mm:ss}] %p : %c{3\} - %m%n" />
