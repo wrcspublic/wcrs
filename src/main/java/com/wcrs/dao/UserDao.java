@@ -14,4 +14,8 @@ public class UserDao extends BaseJpaDao {
 		StringBuilder sb = new StringBuilder("from User u where 1 = 1");
 		return this.queryByWhere(User.class, sb.toString(), null, start, max);
 	}
+	
+	public void saveUser(User user) {
+		this.save(user);
+	}
 }
